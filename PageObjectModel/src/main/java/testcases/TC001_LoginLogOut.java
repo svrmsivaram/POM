@@ -10,6 +10,7 @@ public class TC001_LoginLogOut extends LeafTapsWrappers{
 	
 	@BeforeClass
 	public void setValue(){
+		//TestingValidation
 		testCaseName = "Login & LogOut";
 		testDescription ="Login and Logout of LeafTaps";
 		category = "smoke";
