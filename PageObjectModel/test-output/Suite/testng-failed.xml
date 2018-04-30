@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="classes">
+  <test name="Test(failed)" parallel="classes">
+    <classes>
+      <class name="testcases.TC001_LoginLogOut">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
+          <include name="afterSuite"/>
+          <include name="setValue"/>
+          <include name="beforeSuite"/>
+          <include name="afterTest"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- testcases.TC001_LoginLogOut -->
+      <class name="testcases.TC001_Loginnegative">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="loginLogOut" invocation-numbers="3"/>
+          <include name="beforeMethod"/>
+          <include name="setValue"/>
+        </methods>
+      </class> <!-- testcases.TC001_Loginnegative -->
+      <class name="testcases.TC003_CreateLead">
+        <methods>
+          <include name="setValue"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="createLead" invocation-numbers="0 1"/>
+        </methods>
+      </class> <!-- testcases.TC003_CreateLead -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
