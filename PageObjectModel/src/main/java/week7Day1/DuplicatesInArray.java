@@ -18,11 +18,6 @@ public class DuplicatesInArray {
 			}
 		
 		
-		
-		
-		
-		
-		
 		/*for(int i=0;i<=a.length-1;i++){
 			int flag= 0;
 			for(int j=i;j<=a.length-1;j++){

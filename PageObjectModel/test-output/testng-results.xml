@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="3" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="29633" started-at="2017-07-29T05:29:56Z" finished-at="2017-07-29T05:30:25Z">
+  <suite name="Suite" duration-ms="19362" started-at="2018-04-30T15:39:18Z" finished-at="2018-04-30T15:39:37Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="29633" started-at="2017-07-29T05:29:56Z" finished-at="2017-07-29T05:30:25Z">
-      <class name="testcases.TC006_DuplicateLead">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testcases.TC006_DuplicateLead@15435c]" name="beforeSuite" is-config="true" duration-ms="950" started-at="2017-07-29T10:59:55Z" finished-at="2017-07-29T10:59:56Z">
+    <test name="Test" duration-ms="19362" started-at="2018-04-30T15:39:18Z" finished-at="2018-04-30T15:39:37Z">
+      <class name="testcases.TC001_LoginLogOut">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testcases.TC001_LoginLogOut@bbc1e0]" name="beforeSuite" is-config="true" duration-ms="1390" started-at="2018-04-30T21:09:16Z" finished-at="2018-04-30T21:09:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:testcases.TC006_DuplicateLead@15435c]" name="beforeTest" is-config="true" duration-ms="1" started-at="2017-07-29T10:59:56Z" finished-at="2017-07-29T10:59:56Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:testcases.TC001_LoginLogOut@bbc1e0]" name="beforeTest" is-config="true" duration-ms="0" started-at="2018-04-30T21:09:18Z" finished-at="2018-04-30T21:09:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="setValue()[pri:0, instance:testcases.TC006_DuplicateLead@15435c]" name="setValue" is-config="true" duration-ms="0" started-at="2017-07-29T10:59:56Z" finished-at="2017-07-29T10:59:56Z">
+        <test-method status="PASS" signature="setValue()[pri:0, instance:testcases.TC001_LoginLogOut@bbc1e0]" name="setValue" is-config="true" duration-ms="0" started-at="2018-04-30T21:09:18Z" finished-at="2018-04-30T21:09:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setValue -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testcases.TC006_DuplicateLead@15435c]" name="beforeMethod" is-config="true" duration-ms="6141" started-at="2017-07-29T10:59:56Z" finished-at="2017-07-29T11:00:03Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testcases.TC001_LoginLogOut@bbc1e0]" name="beforeMethod" is-config="true" duration-ms="8556" started-at="2018-04-30T21:09:19Z" finished-at="2018-04-30T21:09:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="duplicateLead(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.TC006_DuplicateLead@15435c]" name="duplicateLead" duration-ms="21458" started-at="2017-07-29T11:00:03Z" data-provider="fetchData" finished-at="2017-07-29T11:00:24Z">
+        <test-method status="FAIL" signature="loginLogOut(java.lang.String, java.lang.String)[pri:0, instance:testcases.TC001_LoginLogOut@bbc1e0]" name="loginLogOut" duration-ms="766" started-at="2018-04-30T21:09:27Z" data-provider="fetchData" finished-at="2018-04-30T21:09:28Z">
           <params>
             <param index="0">
               <value>
@@ -35,28 +35,160 @@
                 <![CDATA[crmsfa]]>
               </value>
             </param>
-            <param index="2">
-              <value>
-                <![CDATA[siva@gmail.com]]>
-              </value>
-            </param>
           </params>
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[FAILED]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: FAILED
+	at utils.Reporter.reportStep(Reporter.java:33)
+	at utils.Reporter.reportStep(Reporter.java:43)
+	at pages.LoginPage.<init>(LoginPage.java:16)
+	at testcases.TC001_LoginLogOut.loginLogOut(TC001_LoginLogOut.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- duplicateLead -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testcases.TC006_DuplicateLead@15435c]" name="afterMethod" is-config="true" duration-ms="1156" started-at="2017-07-29T11:00:24Z" finished-at="2017-07-29T11:00:25Z">
+        </test-method> <!-- loginLogOut -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testcases.TC001_LoginLogOut@bbc1e0]" name="afterMethod" is-config="true" duration-ms="1922" started-at="2018-04-30T21:09:28Z" finished-at="2018-04-30T21:09:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:testcases.TC006_DuplicateLead@15435c]" name="afterTest" is-config="true" duration-ms="0" started-at="2017-07-29T11:00:25Z" finished-at="2017-07-29T11:00:25Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testcases.TC001_LoginLogOut@bbc1e0]" name="beforeMethod" is-config="true" duration-ms="5294" started-at="2018-04-30T21:09:30Z" finished-at="2018-04-30T21:09:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="loginLogOut(java.lang.String, java.lang.String)[pri:0, instance:testcases.TC001_LoginLogOut@bbc1e0]" name="loginLogOut" duration-ms="667" started-at="2018-04-30T21:09:35Z" data-provider="fetchData" finished-at="2018-04-30T21:09:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[DemoCSR]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[crmsfa]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[FAILED]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: FAILED
+	at utils.Reporter.reportStep(Reporter.java:33)
+	at utils.Reporter.reportStep(Reporter.java:43)
+	at pages.LoginPage.<init>(LoginPage.java:16)
+	at testcases.TC001_LoginLogOut.loginLogOut(TC001_LoginLogOut.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginLogOut -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testcases.TC001_LoginLogOut@bbc1e0]" name="afterMethod" is-config="true" duration-ms="1047" started-at="2018-04-30T21:09:36Z" finished-at="2018-04-30T21:09:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:testcases.TC001_LoginLogOut@bbc1e0]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-04-30T21:09:37Z" finished-at="2018-04-30T21:09:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:testcases.TC006_DuplicateLead@15435c]" name="afterSuite" is-config="true" duration-ms="572" started-at="2017-07-29T11:00:25Z" finished-at="2017-07-29T11:00:26Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:testcases.TC001_LoginLogOut@bbc1e0]" name="afterSuite" is-config="true" duration-ms="610" started-at="2018-04-30T21:09:37Z" finished-at="2018-04-30T21:09:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- testcases.TC006_DuplicateLead -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- testcases.TC001_LoginLogOut -->
+      <class name="testcases.TC001_Loginnegative">
+        <test-method status="PASS" signature="setValue()[pri:0, instance:testcases.TC001_Loginnegative@1fb3008]" name="setValue" is-config="true" duration-ms="0" started-at="2018-04-30T21:09:37Z" finished-at="2018-04-30T21:09:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setValue -->
+        <test-method status="FAIL" signature="loginLogOut(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.TC001_Loginnegative@1fb3008]" name="loginLogOut" duration-ms="125" started-at="2018-04-30T21:09:37Z" data-provider="fetchData" finished-at="2018-04-30T21:09:37Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+The data provider is trying to pass 4 parameters but the method testcases.TC001_Loginnegative#loginLogOut takes 3]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+The data provider is trying to pass 4 parameters but the method testcases.TC001_Loginnegative#loginLogOut takes 3
+	at org.testng.internal.Invoker.injectParameters(Invoker.java:1223)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1118)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginLogOut -->
+      </class> <!-- testcases.TC001_Loginnegative -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
