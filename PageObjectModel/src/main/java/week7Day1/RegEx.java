@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 public class RegEx {
 
 	public static void main(String[] args) {
-		int i =0;
+		/*int i =0;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Please enter the input String:");
 		String str = sc.nextLine();
@@ -21,6 +21,12 @@ public class RegEx {
 		
 		System.out.println("Total no.of Words in the String:"+(i+1));
 		sc.close();
+		*/
+		
+		String s="Ccngizant India Deveopement Centre";
+		int a = s.indexOf('C',1);
+		System.out.println(a);
+		
 	}
 
 }
