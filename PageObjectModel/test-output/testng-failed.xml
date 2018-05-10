@@ -3,6 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
+      <class name="testcases.TC001_Loginnegative">
+        <methods>
+          <include name="loginLogOut"/>
+          <include name="setValue"/>
+        </methods>
+      </class> <!-- testcases.TC001_Loginnegative -->
       <class name="testcases.TC001_LoginLogOut">
         <methods>
           <include name="loginLogOut" invocation-numbers="0 1"/>
@@ -15,12 +21,6 @@
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- testcases.TC001_LoginLogOut -->
-      <class name="testcases.TC001_Loginnegative">
-        <methods>
-          <include name="loginLogOut"/>
-          <include name="setValue"/>
-        </methods>
-      </class> <!-- testcases.TC001_Loginnegative -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
