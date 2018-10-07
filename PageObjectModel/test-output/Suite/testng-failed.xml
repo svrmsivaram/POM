@@ -14,7 +14,6 @@
           <include name="loginLogOut" invocation-numbers="0 1"/>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
-          <include name="afterSuite"/>
           <include name="setValue"/>
           <include name="beforeSuite"/>
           <include name="afterTest"/>

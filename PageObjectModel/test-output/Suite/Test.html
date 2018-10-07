@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri May 11 01:01:53 IST 2018</td>
+<td>Started on:</td><td>Sun Oct 07 14:07:21 IST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>73 seconds (73985 ms)</td>
+<tr><td>Total time:</td><td>31 seconds (31630 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,50 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.TC001_LoginLogOut.afterTest()'><b>afterTest</b><br>Test class: testcases.TC001_LoginLogOut</td>
+<td><div><pre>java.lang.NullPointerException
+	at javax.imageio.ImageIO.write(Unknown Source)
+	at wrappers.GenericWrappers.unloadObjects(GenericWrappers.java:82)
+	at wrappers.LeafTapsWrappers.afterTest(LeafTapsWrappers.java:43)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace33206341", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace33206341'><pre>java.lang.NullPointerException
+	at javax.imageio.ImageIO.write(Unknown Source)
+	at wrappers.GenericWrappers.unloadObjects(GenericWrappers.java:82)
+	at wrappers.LeafTapsWrappers.afterTest(LeafTapsWrappers.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:510)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:211)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.TestRunner.afterRun(TestRunner.java:1027)
+	at org.testng.TestRunner.run(TestRunner.java:627)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -81,8 +125,8 @@ function toggleAllBoxes() {
 	at utils.Reporter.reportStep(Reporter.java:43)
 	at pages.LoginPage.&lt;init&gt;(LoginPage.java:16)
 	at testcases.TC001_LoginLogOut.loginLogOut(TC001_LoginLogOut.java:24)
-... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace19560247", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace19560247'><pre>java.lang.RuntimeException: FAILED
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace17057646", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace17057646'><pre>java.lang.RuntimeException: FAILED
 	at utils.Reporter.reportStep(Reporter.java:33)
 	at utils.Reporter.reportStep(Reporter.java:43)
 	at pages.LoginPage.&lt;init&gt;(LoginPage.java:16)
@@ -121,8 +165,8 @@ function toggleAllBoxes() {
 	at utils.Reporter.reportStep(Reporter.java:43)
 	at pages.LoginPage.&lt;init&gt;(LoginPage.java:16)
 	at testcases.TC001_LoginLogOut.loginLogOut(TC001_LoginLogOut.java:24)
-... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace13762984", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace13762984'><pre>java.lang.RuntimeException: FAILED
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace6912166", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace6912166'><pre>java.lang.RuntimeException: FAILED
 	at utils.Reporter.reportStep(Reporter.java:33)
 	at utils.Reporter.reportStep(Reporter.java:43)
 	at pages.LoginPage.&lt;init&gt;(LoginPage.java:16)
@@ -158,8 +202,8 @@ function toggleAllBoxes() {
 <td title='testcases.TC001_Loginnegative.loginLogOut()'><b>loginLogOut</b><br>Test class: testcases.TC001_Loginnegative</td>
 <td><div><pre>org.testng.TestNGException: 
 The data provider is trying to pass 4 parameters but the method testcases.TC001_Loginnegative#loginLogOut takes 3
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace23830844", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace23830844'><pre>org.testng.TestNGException: 
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace9905635", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace9905635'><pre>org.testng.TestNGException: 
 The data provider is trying to pass 4 parameters but the method testcases.TC001_Loginnegative#loginLogOut takes 3
 	at org.testng.internal.Invoker.injectParameters(Invoker.java:1223)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1118)
