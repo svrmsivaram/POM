@@ -3,6 +3,7 @@ package utils;
 import java.io.File;
 
 import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -32,7 +33,7 @@ public class DataInputProvider{
 			// Declaration the array size
 			data = new String[rowCount][columnCount];
 
-
+			DataFormatter fm= new DataFormatter();
 			// loop through the rows
 			for(int i=1; i <rowCount+1; i++){
 				try {
@@ -42,11 +43,11 @@ public class DataInputProvider{
 					for(int j=0; j <columnCount; j++){ 
 						try {
 							String cellValue = "";
-							
 							try{
 								// Based on Cell Type reading the content from Cell
 								if(row.getCell(j).getCellTypeEnum()==CellType.STRING){					
 									cellValue = row.getCell(j).getStringCellValue();
+									
 								}else if(row.getCell(j).getCellTypeEnum()==CellType.NUMERIC){
 									cellValue = ""+row.getCell(j).getNumericCellValue();					
 								}else if(row.getCell(j).getCellTypeEnum()==CellType.BLANK){

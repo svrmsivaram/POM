@@ -1,5 +1,11 @@
 package wrappers;
 
+import java.awt.AWTException;
+import java.awt.HeadlessException;
+import java.awt.Rectangle;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -9,6 +15,8 @@ import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import javax.imageio.ImageIO;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
@@ -17,6 +25,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.internal.ProfilesIni;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -66,6 +75,26 @@ public class GenericWrappers extends Reporter implements Wrappers {
 
 	public void unloadObjects() {
 		prop = null;
+		
+		try {
+			BufferedImage img = new Robot().createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
+			try {
+				ImageIO.write(img, "png", new File(""));
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		} catch (HeadlessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (AWTException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
 	}
 
 	/**
@@ -77,6 +106,8 @@ public class GenericWrappers extends Reporter implements Wrappers {
 	 */
 	public void invokeApp(String browser) {
 		invokeApp(browser,false);
+		
+		
 	}
 
 	/**
@@ -458,7 +489,7 @@ public class GenericWrappers extends Reporter implements Wrappers {
 	 */
 	public void selectVisibileTextById(String id, String value) {
 		try{
-			new Select(driver.findElement(By.id(id))).selectByVisibleText(value);;
+			new Select(driver.findElement(By.id(id))).selectByVisibleText(value);
 			reportStep("The element with id: "+id+" is selected with value :"+value, "PASS");
 		} catch (Exception e) {
 			reportStep("The value: "+value+" could not be selected.", "FAIL");
@@ -468,7 +499,7 @@ public class GenericWrappers extends Reporter implements Wrappers {
 
 	public void selectVisibileTextByXPath(String xpath, String value) {
 		try{
-			new Select(driver.findElement(By.xpath(xpath))).selectByVisibleText(value);;
+			new Select(driver.findElement(By.xpath(xpath))).selectByVisibleText(value);
 			reportStep("The element with xpath: "+xpath+" is selected with value :"+value, "PASS");
 		} catch (Exception e) {
 			reportStep("The value: "+value+" could not be selected.", "FAIL");
